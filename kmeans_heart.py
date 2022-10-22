@@ -29,12 +29,6 @@ dataset = dataset.values
 # Aplica redução de dimensionalidade no array das variáveis
 pca = PCA(n_components=2).fit_transform(dataset)
 
-# Determinando um range do Hyperparâmetro  "K"  do Kmeans
-k_range = range(5, 10)
-
-# Aplicando o modelo K-Means para cada valor de K (esta célula pode levar bastante tempo para ser executada)
-k_means_var = [KMeans(n_clusters=k).fit(pca) for k in k_range]
-
 
 """
 # Criando um modelo com K = 5
